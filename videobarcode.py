@@ -56,7 +56,7 @@ def composeVideoStrips():
 	imageList = []
 	for filename in fileList:
 		if filename.endswith('.png'):
-			imageList.append(filename)
+			imageList.append('"' + filename + '"')
 	imageListString = ' '.join(imageList)
 
 	command = 'montage {} -geometry +0+0 -tile x1 out.png'\
